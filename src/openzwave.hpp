@@ -136,6 +136,7 @@ namespace OZW {
 		static NAN_METHOD(GetNodeSecurity);
 		static NAN_METHOD(GetNodeBasic);
 		static NAN_METHOD(GetNodeGeneric);
+		static NAN_METHOD(GetNodeDeviceType);
 		static NAN_METHOD(GetNodeSpecific);
 		static NAN_METHOD(GetNodeType);
 		static NAN_METHOD(GetNodeManufacturerId);

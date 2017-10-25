@@ -343,6 +343,15 @@ namespace OZW {
 		info.GetReturnValue().Set(Nan::New<Integer>(result));
 	}
 
+	NAN_METHOD(OZW::GetNodeDeviceType)
+	// ===================================================================
+	{
+		Nan::HandleScope scope;
+		CheckMinArgs(1, "nodeid");
+		uint8 nodeid = Nan::To<Number>(info[0]).ToLocalChecked()->Value();
+		uint16 result = OpenZWave::Manager::Get()->GetNodeDeviceType(homeid, nodeid);
+		info.GetReturnValue().Set(Nan::New<Integer>(result));
+	}
 	/*
 	 *
 	 */
